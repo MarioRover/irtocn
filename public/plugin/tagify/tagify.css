@@ -1,0 +1,133 @@
+tags {
+    display: inline-block;
+    background-color: #3b3c40;
+    box-shadow: inset 0 1px 2px rgba(27,31,35,.075);
+    color: #fff;
+    border-radius: 3px;
+    overflow: hidden;
+    cursor: text;
+    width: 100%;
+    padding: 5px;
+  }
+  tags:hover {
+    border-color: #CCC;
+  }
+  @keyframes tags--bump {
+    30% {
+      box-shadow: 0 0 0 4px #E5E5E5;
+    }
+  
+  }
+  tags tag {
+    display: inline-block;
+    vertical-align: top;
+    margin: 5px 0 5px 5px;
+    position: relative;
+    cursor: default;
+    white-space: nowrap;
+    transition: .13s ease-out;
+    animation: .3s tags--bump 1 ease-out;
+  }
+  tags tag > span {
+    display: inline-block;
+    padding: 0.3em 0.5em;
+    padding-right: 1.5em;
+    border-radius: 3px;
+    color: #fff;
+    background: #03519e;
+    transition: .13s ease-out;
+    font-size: 13px;
+  }
+  tags tag:hover span {
+    box-shadow: 0 0 0 2px #7AC3FF inset;
+    transition: 50ms;
+  }
+  tags tag.tagify--noAnim {
+    animation: none;
+  }
+  tags tag.tagify--hide {
+    pointer-events: none;
+    width: 0 !important;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+    opacity: 0;
+    transform: scale(0);
+    transition: .3s;
+  }
+  @keyframes tagify--pulse {
+    50% {
+      box-shadow: 0 0 0 2px #7AC3FF inset;
+    }
+  
+  }
+  tags tag.tagify--mark span {
+    animation: .4s tagify--pulse 3 ease-out;
+  }
+  tags tag x {
+    font: 14px/15px Serif;
+    color: #fff;
+    width: 14px;
+    height: 14px;
+    text-align: center;
+    border-radius: 50px;
+    position: absolute;
+    right: calc(0.5em - 2px);
+    top: 42%;
+    cursor: pointer;
+    transform: translateY(-50%);
+    transition: .2s;
+  }
+  tags tag x::after {
+    content: "\00D7";
+  }
+  tags tag x:hover {
+    color: white;
+    background: #cc3210;
+  }
+  tags tag x:hover + span {
+    box-shadow: 0 0 0 2px #D39494 inset;
+    transition: .2s;
+  }
+  tags input,
+  tags textarea {
+    border: 0;
+    display: none;
+  }
+  tags div {
+    display: inline-block;
+    min-width: 10px;
+    margin: 5px;
+    padding: 0.3em 0.5em;
+  }
+  tags .input {
+    display: block;
+    position: relative;
+    white-space: nowrap;
+    font-size: 13px;
+  }
+  tags .input.placeholder {
+    color: #999;
+  }
+  tags .input.placeholder::after {
+    opacity: 1;
+    transform: none;
+    max-width: 200px;
+  }
+  tags .input::after {
+    content: attr(data-placeholder);
+    display: inline-block;
+    opacity: 0;
+    max-width: 0;
+    transform: translatex(6px);
+    transition: .15s ease-out;
+    font-size: 13px;
+    font-weight: 300;
+  }
+  tags .input::before {
+    content: '\200B';
+  }
+  tags .input:focus {
+    outline: none;
+  }

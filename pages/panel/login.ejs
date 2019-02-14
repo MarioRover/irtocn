@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/dist/<%= manifest.admin[0] %>" as="style">
+</head>
+<body>
+    <div class="login-admin grid align-center-middle">
+        <div id="particles-js"></div>
+        <div class="login-wrap form-box">
+            <form class="Login w100" method="POST" action="/admin/login">
+                <a href="/" class="logo grid align-center-middle mb-1">
+                    <img src="/panel/images/logo/mario-rover-brand-compressor.png" alt="Mario Rover"/>
+                </a>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" placeholder="Enter Email" name="email" type="text">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" placeholder="Enter Password" name="password">
+                </div>
+                <div class="form-group">
+                    <div class="checkbox2">
+                        <span>Remember Me</span>
+                        <input type="text" name="remember" class="hidden" value="false">
+                        <div class="tick grid align-center-middle">
+                            <i class="fas fa-check"></i>
+                        </div>
+                    </div>
+                    </div>
+                <div class="form-group mb-1">
+                    <button class="btn btn-primary grid align-center-middle w100" type="submit">
+                        <span>Sign in</span>
+                        <input type="hidden" name="recaptcha" value="">
+                    </button>
+                </div>
+                <div class="form-group mb-1">
+                    <a class="reset" href="#">Forget Email or Password</a>
+                </div>
+                <div class="error-box">
+                    <% req.flash('errors').forEach(err => { %>
+                        <span><%= err %></span><br>
+                    <% }) %>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js?render=<%= sitekey %>"></script>
+    <script>
+        grecaptcha.ready(function() {
+            grecaptcha.execute('<%= sitekey %>', {action: 'login'})
+                .then(function(token) {
+                    $('.Login input[name = "recaptcha"]').val(token);
+                });
+        });
+    </script>
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="/dist/<%= manifest.admin[1] %>"></script>  
+</body>
+</html>
+

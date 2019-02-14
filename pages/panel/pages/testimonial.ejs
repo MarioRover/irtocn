@@ -1,0 +1,110 @@
+<div class="header w100 grid-x align-middle align-justify">
+    <div class="title grid-y align-top">
+        <h6>Dashboard</h6>
+        <div class="sub-title grid-x align-middle">
+            <a>Dashboard</a>
+            <i class="fas fa-chevron-right"></i>
+            <span>Pages</span>
+            <i class="fas fa-chevron-right"></i>
+            <span class="active">Testimonial</span>
+        </div>
+    </div>
+</div>
+<div class="body w100 grid-y">
+    <div class="grid-x form-box w100">
+        <form class="Testimonial w100">
+            <div class="form-head">
+                <h6>Testimonial</h6>
+            </div>
+            <div class="error-box"></div>
+            <% if(testimonial !== 'undefined') { %>
+            <div class="lastupdate grid-x-no align-middle">
+                <h6>Last Update : </h6>
+                <span><%= testimonial.updatedBy.name %></span>
+                <span><%= date(testimonial.updatedAt).format('YYYY MMM D') %></span>
+            </div>    
+            <% } %>    
+            <div class="form-group grid-x align-justify">
+                <div class="group">
+                    <label for="headerEN">Header English</label>
+                    <input type="text" name="headerEN" placeholder="Enter Header Text" value="<%= testimonial.headerEN %>">
+                </div>
+                <div class="group">
+                    <label for="descEN">Description English</label>
+                    <input type="text" name="descEN" placeholder="Enter Description Text" value="<%= testimonial.descEN %>">
+                </div>
+            </div>
+            <div class="form-group grid-x align-justify">
+                <div class="group">
+                    <label for="headerCN">Header China</label>
+                    <input type="text" name="headerCN" placeholder="Enter Header Text" value="<%= testimonial.headerCN %>">
+                </div>
+                <div class="group">
+                    <label for="descCN">Description China</label>
+                    <input type="text" name="descCN" placeholder="Enter Description Text" value="<%= testimonial.descCN %>">
+                </div>
+            </div>
+            <div class="form-group grid-x align-justify">
+                <div class="group">
+                    <label for="headerEN">Header Persian</label>
+                    <input class="input-fa" type="text" name="headerFA" placeholder="متن تیتر را وارد کنید" value="<%= testimonial.headerFA %>">
+                </div>
+                <div class="group">
+                    <label for="descEN">Description Persian</label>
+                    <input class="input-fa" type="text" name="descFA" placeholder="متن توضیحات را وارد کنید" value="<%= testimonial.descFA %>">
+                </div>
+            </div>
+            <div class="form-group grid-x align-justify">
+                <div class="input-file">
+                        <label for="descEN">Image of Background</label>
+                        <div class="grid align-center">
+                            <div class="image-box box1">
+                                <i class="photo fas fa-image"></i>
+                                <% if(isEmpty(testimonial.image)) { %>
+                                    <img class="file" src="">
+                                <% } else { %>
+                                    <img class="file exist" src="<%= testimonial.image.destination %>">
+                                <% } %>
+                                <div class="garbage" title="Remove">
+                                    <i class="fas fa-trash"></i>
+                                </div>
+                                <div class="upload" title="Upload">
+                                    <i class="fas fa-file-upload"></i>
+                                </div>
+                                <div class="uploaded" title="Uploaded">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <div class="loading grid align-center-middle">
+                                    <img src="/panel/images/svg/Spinner-1s-200px.svg" alt="Loading">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="file grid-y">
+                            <span class="text hidden"></span>
+                            <input type="file" name="image">
+                            <div class="file-btn btn btn-secondary">
+                                <i class="fas fa-upload"></i>
+                                <span>Choose a File</span>
+                            </div>
+                            <span class="destination hidden"></span>
+                            <span class="path hidden"></span>
+                            <span class="originalname hidden"></span>
+                        </div>
+                        <span class="form-text">
+                            For upload image , Press upload button
+                        </span>
+                </div>
+                <div class="group">
+                    <label for="logo">Logo</label>
+                    <input type="text" name="logo" placeholder="Please Enter < i > Tag" value="<%= testimonial.logo %>">
+                    <span class="form-text">
+                        Choice Icon Tags < i > From <a href="https://fontawesome.com/" target="_blank">fontawesome.com</a>
+                    </span>
+                </div>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-primary">Save</button>
+            </div>
+        </form>
+    </div>
+</div>

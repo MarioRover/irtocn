@@ -1,0 +1,111 @@
+/* ///////////IRAN Sans/////////////// */
+@font-face {
+  font-family: 'iransans';
+  src: url('../fonts/IranSans/eot/IRANSansWeb_Bold.eot') format('eot'), /* IE6�8 */
+  url('../fonts/IranSans/woff2/IRANSansWeb_Bold.woff2') format('woff2'), /* Chrome36+, Opera24+*/
+  url('../fonts/IranSans/woff/IRANSansWeb_Bold.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+  url('../fonts/IranSans/ttf/IRANSansWeb_Bold.ttf') format('ttf');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'iransans';
+  src: url('../fonts/IranSans/eot/IRANSans-Black.eot') format('eot'), /* IE6�8 */
+  url('../fonts/IranSans/woff2/IRANSans-Black.woff2') format('woff2'), /* Chrome36+, Opera24+*/
+  url('../fonts/IranSans/woff/IRANSans-Black.woff') format('woff'); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: 'iransans';
+  src: url('../fonts/IranSans/eot/IRANSansWeb_Medium.eot') format('eot'), /* IE6�8 */
+  url('../fonts/IranSans/woff2/IRANSansWeb_Medium.woff2') format('woff2'), /* Chrome36+, Opera24+*/
+  url('../fonts/IranSans/woff/IRANSansWeb_Medium.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+  url('../fonts/IranSans/ttf/IRANSansWeb_Medium.ttf') format('ttf');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'iransans';
+  src: url('../fonts/IranSans/eot/IRANSansWeb_UltraLight.eot') format('eot'), /* IE6�8 */
+  url('../fonts/IranSans/woff2/IRANSansWeb_UltraLight.woff2') format('woff2'), /* Chrome36+, Opera24+*/
+  url('../fonts/IranSans/woff/IRANSansWeb_UltraLight.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+  url('../fonts/IranSans/ttf/IRANSansWeb_UltraLight.ttf') format('ttf');
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: 'iransans';
+  src: url('../fonts/IranSans/eot/IRANSansWeb_Light.eot') format('eot'), /* IE6�8 */
+  url('../fonts/IranSans/woff2/IRANSansWeb_Light.woff2') format('woff2'), /* Chrome36+, Opera24+*/
+  url('../fonts/IranSans/woff/IRANSansWeb_Light.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+  url('../fonts/IranSans/ttf/IRANSansWeb_Light.ttf') format('ttf');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'iransans';
+  src: url('../fonts/IranSans/eot/IRANSansWeb.eot') format('eot'), /* IE6�8 */
+  url('../fonts/IranSans/woff2/IRANSansWeb.woff2') format('woff2'), /* Chrome36+, Opera24+*/
+  url('../fonts/IranSans/woff/IRANSansWeb.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+  url('../fonts/IranSans/ttf/IRANSansWeb.ttf') format('ttf');
+  font-weight: normal;
+}
+/* Open Sans */
+@font-face {
+  font-family: 'OpenSans';
+  src: url('../fonts/OpenSans/open-sans.regular.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 400;
+  unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'OpenSans';
+  src: url('../fonts/OpenSans/open-sans.semibold.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 600;
+  unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'OpenSans';
+  src: url('../fonts/OpenSans/open-sans.bold.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 700;
+  unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/Poppins/Poppins-Light.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 300;
+  unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/Poppins/Poppins-Regular.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 400;
+  unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/Poppins/Poppins-Medium.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 500;
+  unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/Poppins/Poppins-SemiBold.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 600;
+  unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/Poppins/Poppins-Bold.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 700;
+  unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}

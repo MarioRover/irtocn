@@ -1,0 +1,101 @@
+<div class="header w100 grid-x align-middle align-justify">
+    <div class="title grid-y align-top">
+        <h6>Dashboard</h6>
+        <div class="sub-title grid-x align-middle">
+            <a>Dashboard</a>
+            <i class="fas fa-chevron-right"></i>
+            <a href="/admin/admins">Admins</a>
+            <i class="fas fa-chevron-right"></i>
+            <span class="active"><%= admin.name %></span>
+        </div>
+    </div>
+</div>
+<div class="body w100 grid-y">
+    <div class="grid-x form-box w100">
+        <form class="UpdateAdmin w100">
+            <div class="form-head">
+                <h6><%= admin.name %></h6>
+            </div>
+            <div class="error-box"></div>
+            <div class="form-group grid-x align-justify">
+                <div class="group">
+                    <label for="name">Admin Name</label>
+                    <input type="text" name="name" placeholder="Enter Admin Name" value="<%= admin.name %>">
+                </div>
+                <div class="group">
+                    <label for="email">Admin Email</label>
+                    <input type="text" name="email" placeholder="Enter Admin Email" value="<%= admin.email %>">
+                </div>
+            </div>
+            <div class="form-group grid-x align-justify">
+                <div class="group">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" placeholder="Enter Password" value="">
+                </div>
+                <div class="group">
+                    <label for="CPassword">Confirm Password</label>
+                    <input type="password" name="CPassword" placeholder="Enter Password Again" value="">
+                </div>
+            </div>
+            <div class="form-group grid align-justify">
+                <div class="input-file">
+                    <div class="grid align-center">
+                        <div class="image-box box1">
+                            <i class="photo fas fa-image"></i>
+                            <% if(isEmpty(admin.profileImage)) { %>
+                                <img class="file" src="">
+                            <% } else { %>
+                                <img class="file exist" src="<%= admin.profileImage.destination %>">
+                            <% } %>   
+                            <div class="garbage" title="Remove">
+                                <i class="fas fa-trash"></i>
+                            </div>
+                            <div class="upload" title="Upload">
+                                <i class="fas fa-file-upload"></i>
+                            </div>
+                            <div class="uploaded" title="Uploaded">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div class="loading grid align-center-middle">
+                                <img src="/panel/images/svg/Spinner-1s-200px.svg" alt="Loading">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="file grid-y">
+                        <span class="text hidden"></span>
+                        <input type="file" name="profile">
+                        <div class="file-btn btn btn-secondary">
+                            <i class="fas fa-upload"></i>
+                            <span>Choose a File</span>
+                        </div>
+                        <span class="destination hidden"></span>
+                        <span class="path hidden"></span>
+                        <span class="originalname hidden"></span>
+                    </div>
+                    <span class="form-text">
+                        For upload image , Press upload button
+                    </span>
+                </div>
+                <div class="form-group align-left w50">
+                    <div class="grid-y pl-1">
+                        <div class="checkbox mb-1">
+                            <span>Super Admin Ability</span>
+                            <input type="checkbox" name="superadmin" class="hidden">
+                            <div class="tick grid align-center-middle <% if(admin.superadmin) { %> ticked <% } %>">
+                            <i class="fas fa-check"></i>
+                            </div>
+                        </div>
+                        <span class="form-text">
+                           WARNING : If an admin in is in super admin mode , he can acess to Admins Setting include Admin List and Create new Admin , also Setting Website.<br>
+                        </span>
+                    </div>
+                </div>
+            </div>
+           
+            <div class="form-group">
+                <button class="btn btn-primary">Add</button>
+                <input type="hidden" name="adminId" value="<%= admin._id %>">
+            </div>
+        </form>
+    </div>
+</div>

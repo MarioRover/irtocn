@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title><%= title %></title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/panel/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/panel/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/panel/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/panel/images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/panel/images/favicon/safari-pinned-tab.svg" color="#f30000">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+    <link rel="stylesheet" href="/dist/<%= manifest.admin[0] %>" as="style">
+    <%- style %>
+</head>
+<body>
+    <div class="grid-y">
+        <%- include(viewPath('panel/layout/header')) %>
+        <main class="grid align-center">
+            <div class="w100">
+                <div class="content grid-x-no">
+                    <%- include(viewPath('panel/layout/web-navbar')) %>  
+                    <div class="main grid-y">
+                        <%- body %>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="/plugin/ckeditor/ckeditor.js"></script>
+    <script src="/dist/<%= manifest.admin[1] %>"></script>  
+    <%- script %>
+    <script>
+        function activeRow(rowName) {
+            $(`.content .navbar .row.${rowName}`).addClass('active');
+        }
+        activeRow('<%= activeRow %>');
+        $('.content .navbar .row.messages .notify span').text('<%- unseen !== 0 ? unseen : ""  %>');
+    </script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<div class="header w100 grid-x align-middle align-justify">
+    <div class="title grid-y align-top">
+        <h6>Dashboard</h6>
+        <div class="sub-title grid-x align-middle">
+            <a>Dashboard</a>
+            <i class="fas fa-chevron-right"></i>
+            <span>Pages</span>
+            <i class="fas fa-chevron-right"></i>
+            <span class="active">Contact</span>
+        </div>
+    </div>
+</div>
+<div class="body w100 grid-y">
+    <div class="grid-x form-box w100">
+        <form class="Contact w100">
+            <div class="form-head">
+                <h6>Contact Description</h6>
+            </div>
+            <% if(contact !== 'undefined') { %>
+                <div class="lastupdate grid-x-no align-middle">
+                    <h6>Last Update : </h6>
+                    <span><%= contact.updatedBy.name %></span>
+                    <span><%= date(contact.updatedAt).format('YYYY MMM D') %></span>
+                </div>    
+            <% } %>
+            <div class="form-group grid-y">
+                <label for="headerEN">Headr of English Message</label>
+                <input type="text" name="headerEN" placeholder="Enter Header Text" value="<%= contact.headerEN %>">
+            </div>
+            <div class="form-group grid-y">
+                <label for="headerCN">Headr of China Message</label>
+                <input type="text" name="headerCN" placeholder="输入标题文本" value="<%= contact.headerCN %>">
+            </div>
+            <div class="form-group grid-y">
+                <label for="headerFA">Headr of Persian Message</label>
+                <input class="input-fa" type="text" name="headerFA" placeholder="متن سربرگ را وارد کنید" value="<%= contact.headerFA %>">
+            </div>
+            <div class="form-group grid-y">
+                <label class="mb-1 mt-1" for="descEN">English Description</label>
+                <textarea name="descEN" id="desc1" cols="30" rows="10"><%= contact.descEN %></textarea>
+            </div>
+            <div class="form-group grid-y">
+                <label class="mb-1 mt-1" for="descCN">China Description</label>
+                <textarea name="descCN" id="desc2" cols="30" rows="10"><%= contact.descCN %></textarea>
+            </div>
+            <div class="form-group grid-y">
+                <label class="mb-1 mt-1" for="descFA">Persian Description</label>
+                <textarea name="descFA" id="desc3" cols="30" rows="10"><%= contact.descFA %></textarea>
+            </div>
+            <div class="form-group grid align-left">
+                <div class="input-file">
+                    <div class="grid align-center">
+                        <div class="image-box box1">
+                            <i class="photo fas fa-image"></i>
+                            <% if(isEmpty(contact.image)) { %>
+                                <img class="file" src="">
+                            <% } else { %>
+                                <img class="file exist" src="<%= contact.image.destination %>">
+                            <% } %>
+                            <div class="garbage" title="Remove">
+                                <i class="fas fa-trash"></i>
+                            </div>
+                            <div class="upload" title="Upload">
+                                <i class="fas fa-file-upload"></i>
+                            </div>
+                            <div class="uploaded" title="Uploaded">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div class="loading grid align-center-middle">
+                                <img src="/panel/images/svg/Spinner-1s-200px.svg" alt="Loading">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="file grid-y">
+                        <span class="text hidden"></span>
+                        <input type="file" name="image">
+                        <div class="file-btn btn btn-secondary">
+                            <i class="fas fa-upload"></i>
+                            <span>Choose a File</span>
+                        </div>
+                        <span class="destination hidden"></span>
+                        <span class="path hidden"></span>
+                        <span class="originalname hidden"></span>
+                    </div>
+                    <span class="form-text">
+                        For upload image , Press upload button
+                    </span>
+                </div>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-primary">Save</button>
+            </div>
+        </form>
+    </div>
+</div>
+<script>
+    CKEDITOR.replace('desc1' , {
+        filebrowserUploadUrl : '/admin/ckeditor-image',
+    });
+    CKEDITOR.replace('desc2' , {
+        filebrowserUploadUrl : '/admin/ckeditor-image',
+    });
+    CKEDITOR.replace('desc3' , {
+        filebrowserUploadUrl : '/admin/ckeditor-image',
+    });
+</script>

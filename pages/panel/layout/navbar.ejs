@@ -1,0 +1,133 @@
+<a href="/admin/dashboard" class="row dashboard align-left">
+    <div class="grid-x-no align-middle">
+        <img src="/panel/images/logo/dashboard-compressor.png">
+        <span>Dashboard</span>
+    </div>
+</a>
+<div class="row pages handler align-justify">
+    <div class="grid-x-no align-middle">
+      <img src="/panel/images/logo/folder-compressor.png">
+      <span>Pages</span>
+    </div>
+</div>
+<div class="drawer">
+    <a href="/admin/pages/home" class="row align-justify">
+        <div class="grid-x-no align-middle">
+            <img src="/panel/images/logo/sticky-compressor.png">
+            <span>Home</span>
+        </div>
+    </a>
+    <a href="/admin/pages/about" class="row align-justify">
+        <div class="grid-x-no align-middle">
+            <img src="/panel/images/logo/sticky-compressor.png">
+            <span>About</span>
+        </div>
+    </a>
+    <a href="/admin/pages/skills" class="row align-justify">
+        <div class="grid-x-no align-middle">
+            <img src="/panel/images/logo/sticky-compressor.png">
+            <span>Skills</span>
+        </div>
+    </a>
+    <a href="/admin/pages/service" class="row align-justify">
+        <div class="grid-x-no align-middle">
+            <img src="/panel/images/logo/sticky-compressor.png">
+            <span>Service</span>
+        </div>
+    </a>
+    <a href="/admin/pages/experiences" class="row align-justify">
+        <div class="grid-x-no align-middle">
+            <img src="/panel/images/logo/sticky-compressor.png">
+            <span>Experiences</span>
+        </div>
+    </a>
+    <a href="/admin/pages/education" class="row align-justify">
+        <div class="grid-x-no align-middle">
+            <img src="/panel/images/logo/sticky-compressor.png">
+            <span>Education</span>
+        </div>
+    </a>
+    <a href="/admin/pages/testimonial" class="row align-justify">
+        <div class="grid-x-no align-middle">
+            <img src="/panel/images/logo/sticky-compressor.png">
+            <span>Testimonial</span>
+        </div>
+    </a>
+    <a href="/admin/pages/contact" class="row align-justify">
+        <div class="grid-x-no align-middle">
+            <img src="/panel/images/logo/sticky-compressor.png">
+            <span>Contact</span>
+        </div>
+    </a>
+</div>
+<a href="/admin/messages" class="row messages align-justify">
+    <div href="/admin/messages" class="grid-x-no align-middle">
+        <img src="/panel/images/logo/email-compressor.png">
+        <span>Messages</span>
+    </div>
+    <div class="notify">
+        <span></span>
+    </div>
+</a>
+<% if(req.user.superadmin) { %>
+<div class="row Admins handler align-justify">
+    <div class="grid-x-no align-middle">
+        <img src="/panel/images/logo/admins-compressor.png">
+        <span>Admins</span>
+    </div>
+</div>
+<div class="drawer">
+    <a href="/admin/admins" class="row align-justify">
+        <div class="grid-x-no align-middle">
+            <img src="/panel/images/logo/admin-card-compressor.png">
+            <span>Admins List</span>
+        </div>
+    </a>
+    <a href="/admin/admins/new" class="row align-justify">
+        <div class="grid-x-no align-middle">
+            <img src="/panel/images/logo/admin-compressor.png">
+            <span>Create New Admin</span>
+        </div>
+    </a>
+</div>
+<div class="row Setting handler align-justify">
+    <div class="grid-x-no align-middle">
+        <img src="/panel/images/logo/window-system-compressor.png">
+        <span>Setting Website</span>
+    </div>
+</div>
+<div class="drawer">
+    <a href="/admin/setting/info" class="row align-justify">
+        <div class="grid-x-no align-middle">
+            <img src="/panel/images/logo/sign-info-compressor.png">
+            <span>Information</span>
+        </div>
+    </a>
+    <a href="/admin/setting/social" class="row align-justify">
+        <div class="grid-x-no align-middle">
+            <img src="/panel/images/logo/social-facebook-compressor.png">
+            <span>Social Networking</span>
+        </div>
+    </a>
+    <a href="/admin/setting/seo" class="row align-justify">
+        <div class="grid-x-no align-middle">
+            <img src="/panel/images/logo/tag-compressor.png">
+            <span>SEO</span>
+        </div>
+    </a>
+</div>
+<% } %>
+<a href="/" class="row align-left" target="_blank">
+    <div target="_blank" class="grid-x-no align-middle">
+        <img src="/panel/images/logo/globe-compressor.png">
+        <span>Visit Website</span>
+    </div>
+</a>
+<% if(req.user.developer) { %>
+<a href="/admin/dev" class="row developer align-left">
+    <div class="grid-x-no align-middle">
+        <img src="/panel/images/logo/wrench-compressor.png">
+        <span>Developer Tools</span>
+    </div>
+</a>
+<% } %>    

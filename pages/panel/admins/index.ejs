@@ -1,0 +1,50 @@
+<div class="header w100 grid-x align-middle align-justify">
+    <div class="title grid-y align-top">
+        <h6>Dashboard</h6>
+        <div class="sub-title grid-x align-middle">
+            <a>Dashboard</a>
+            <i class="fas fa-chevron-right"></i>
+            <span class="active">Admins</span>
+        </div>
+    </div>
+</div>
+<div class="body w100 grid-y">
+    <div class="grid-x form-box w100">
+        <table class="table w100">
+            <thead>
+                <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Date</th>
+                <th>Option</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% if(!isEmpty(admins)) {
+                    let i = 0;
+                    admins.forEach(admin => { i+=1 %>
+                        <tr>
+                            <th class="row"><%= i %></th>
+                            <td><%= admin.name %></td>
+                            <td><%= admin.email %></td>
+                            <td><%= date(admin.createdAt).format('YYYY MMM D') %></td>
+                            <td>
+                                <div class="grid-x align-left">
+                                    <a href="/admin/admins/<%= admin._id %>" class="button" title="Edit"><i class="fas fa-pencil-alt"></i></a>
+                                    <button title="Delete" class="deleteAdmin" value="<%= admin._id %>"><i class="far fa-trash-alt"></i></button>
+                                </div>
+                            </td>
+                        </tr>
+                    <% }) 
+                } %>
+            </tbody>
+        </table>
+    </div>
+</div>
+<script>
+    const rowDelete = (objId) => {
+        let row = $(`tr td button[value=${objId}]`).parents('tr');
+        $(row).remove();
+    }
+</script>

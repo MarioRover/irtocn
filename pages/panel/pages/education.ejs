@@ -1,0 +1,204 @@
+<div class="header w100 grid-x align-middle align-justify">
+    <div class="title grid-y align-top">
+        <h6>Dashboard</h6>
+        <div class="sub-title grid-x align-middle">
+            <a>Dashboard</a>
+            <i class="fas fa-chevron-right"></i>
+            <span>Pages</span>
+            <i class="fas fa-chevron-right"></i>
+            <span class="active">Education</span>
+        </div>
+    </div>
+</div>
+<div class="body w100 grid-y">
+    <div class="grid-x form-box w100">
+        <form class="Education w100">
+            <div class="form-head">
+                <h6>Education</h6>
+            </div>
+            <div class="error-box"></div>
+            <% if(education !== 'undefined') { %>
+                <div class="lastupdate grid-x-no align-middle">
+                    <h6>Last Update : </h6>
+                    <span><%= education.updatedBy.name %></span>
+                    <span><%= date(education.updatedAt).format('YYYY MMM D') %></span>
+                </div>    
+            <% } %>
+            <!-- Header -->
+            <div class="form-group grid-y">
+                <label for="headerEN">Headr of English Education</label>
+                <input type="text" name="headerEN" placeholder="Enter Header Text" value="<%= education.headerEN %>">
+            </div>
+            <div class="form-group grid-y">
+                <label for="headerCN">Headr of China Education</label>
+                <input type="text" name="headerCN" placeholder="Enter Header Text" value="<%= education.headerCN %>">
+            </div>
+            <div class="form-group grid-y">
+                <label for="headerFA">Headr of Persian Education</label>
+                <input class="input-fa" type="text" name="headerFA" placeholder="Enter Header Text" value="<%= education.headerFA %>">
+            </div>
+            <!-- First -->
+            <div class="form-group grid-y">
+                <label class="mb-1 mt-1" for="desc1EN">First Education English Description</label>
+                <textarea name="desc1EN" id="desc1" cols="30" rows="10"><%= education.desc1EN %></textarea>
+            </div>
+            <div class="form-group grid-y">
+                <label class="mb-1 mt-1" for="desc1CN">First education China Description</label>
+                <textarea name="desc1CN" id="desc2" cols="30" rows="10"><%= education.desc1CN %></textarea>
+            </div>
+            <div class="form-group grid-y">
+                <label class="mb-1 mt-1" for="desc1FA">First Education Persian Description</label>
+                <textarea name="desc1FA" id="desc3" cols="30" rows="10"><%= education.desc1FA %></textarea>
+            </div>
+            <div class="form-group grid-y">
+                <label for="icon1">Icon of First Education</label>
+                <input type="text" name="icon1" placeholder="Please Enter < i > Tag" value="<%= education.icon1 %>">
+                <span class="form-text">
+                    Choice Icon Tags < i > From <a href="https://fontawesome.com/" target="_blank">fontawesome.com</a>
+                </span>
+            </div>
+            <!-- Second -->
+            <div class="form-group grid-y">
+                <label class="mb-1 mt-1" for="desc2EN">Second Education English Description</label>
+                <textarea name="desc2EN" id="desc4" cols="30" rows="10"><%= education.desc2EN %></textarea>
+            </div>
+            <div class="form-group grid-y">
+                <label class="mb-1 mt-1" for="desc2CN">Second Education China Description</label>
+                <textarea name="desc2CN" id="desc5" cols="30" rows="10"><%= education.desc2CN %></textarea>
+            </div>
+            <div class="form-group grid-y">
+                <label class="mb-1 mt-1" for="desc2FA">Second Education Persian Description</label>
+                <textarea name="desc2FA" id="desc6" cols="30" rows="10"><%= education.desc2FA %></textarea>
+            </div>
+            <div class="form-group grid-y">
+                <label for="icon2">Icon of Second Education</label>
+                <input type="text" name="icon2" placeholder="Please Enter < i > Tag" value="<%= education.icon2 %>">
+                <span class="form-text">
+                    Choice Icon Tags < i > From <a href="https://fontawesome.com/" target="_blank">fontawesome.com</a>
+                </span>
+            </div>
+            <!-- Third -->
+            <div class="form-group grid-y">
+                <label class="mb-1 mt-1" for="desc3EN">Third Education English Description</label>
+                <textarea name="desc3EN" id="desc7" cols="30" rows="10"><%= education.desc3EN %></textarea>
+            </div>
+            <div class="form-group grid-y">
+                <label class="mb-1 mt-1" for="desc3CN">Third Education China Description</label>
+                <textarea name="desc3CN" id="desc8" cols="30" rows="10"><%= education.desc3CN %></textarea>
+            </div>
+            <div class="form-group grid-y">
+                <label class="mb-1 mt-1" for="desc3FA">Third Education Persian Description</label>
+                <textarea name="desc3FA" id="desc9" cols="30" rows="10"><%= education.desc3FA %></textarea>
+            </div>
+            <div class="form-group grid-y">
+                <label for="icon3">Icon of Third Education</label>
+                <input type="text" name="icon3" placeholder="Please Enter < i > Tag" value="<%= education.icon3 %>">
+                <span class="form-text">
+                    Choice Icon Tags < i > From <a href="https://fontawesome.com/" target="_blank">fontawesome.com</a>
+                </span>
+            </div>
+            <!-- Fourth -->
+            <div class="form-group grid-y">
+                <label class="mb-1 mt-1" for="desc4EN">Fourth Education English Description</label>
+                <textarea name="desc4EN" id="desc10" cols="30" rows="10"><%= education.desc4EN %></textarea>
+            </div>
+            <div class="form-group grid-y">
+                <label class="mb-1 mt-1" for="desc4CN">Fourth Education China Description</label>
+                <textarea name="desc4CN" id="desc11" cols="30" rows="10"><%= education.desc4CN %></textarea>
+            </div>
+            <div class="form-group grid-y">
+                <label class="mb-1 mt-1" for="desc4FA">Fourth Education Persian Description</label>
+                <textarea name="desc4FA" id="desc12" cols="30" rows="10"><%= education.desc4FA %></textarea>
+            </div>
+            <div class="form-group grid-y">
+                <label for="icon4">Icon of Fourth Education</label>
+                <input type="text" name="icon4" placeholder="Please Enter < i > Tag" value="<%= education.icon4 %>">
+                <span class="form-text">
+                    Choice Icon Tags < i > From <a href="https://fontawesome.com/" target="_blank">fontawesome.com</a>
+                </span>
+            </div>
+            <!--  -->
+            <div class="form-group grid align-left">
+                <div class="input-file">
+                    <div class="grid align-center">
+                        <div class="image-box box1">
+                            <i class="photo fas fa-image"></i>
+                            <% if(isEmpty(education.image)) { %>
+                                <img class="file" src="">
+                            <% } else { %>
+                                <img class="file exist" src="<%= education.image.destination %>">
+                            <% } %>
+                            <div class="garbage" title="Remove">
+                                <i class="fas fa-trash"></i>
+                            </div>
+                            <div class="upload" title="Upload">
+                                <i class="fas fa-file-upload"></i>
+                            </div>
+                            <div class="uploaded" title="Uploaded">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div class="loading grid align-center-middle">
+                                <img src="/panel/images/svg/Spinner-1s-200px.svg" alt="Loading">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="file grid-y">
+                        <span class="text hidden"></span>
+                        <input type="file" name="image">
+                        <div class="file-btn btn btn-secondary">
+                            <i class="fas fa-upload"></i>
+                            <span>Choose a File</span>
+                        </div>
+                        <span class="destination hidden"></span>
+                        <span class="path hidden"></span>
+                        <span class="originalname hidden"></span>
+                    </div>
+                    <span class="form-text">
+                        For upload image , Press upload button
+                    </span>
+                </div>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-primary">Save</button>
+            </div>
+        </form>
+    </div>
+</div>
+<script>
+    CKEDITOR.replace('desc1' , {
+        filebrowserUploadUrl : '/admin/ckeditor-image',
+    });
+    CKEDITOR.replace('desc2' , {
+        filebrowserUploadUrl : '/admin/ckeditor-image',
+    });
+    CKEDITOR.replace('desc3' , {
+        filebrowserUploadUrl : '/admin/ckeditor-image',
+    });
+    CKEDITOR.replace('desc4' , {
+        filebrowserUploadUrl : '/admin/ckeditor-image',
+    });
+    CKEDITOR.replace('desc5' , {
+        filebrowserUploadUrl : '/admin/ckeditor-image',
+    });
+    CKEDITOR.replace('desc6' , {
+        filebrowserUploadUrl : '/admin/ckeditor-image',
+    });
+    CKEDITOR.replace('desc7' , {
+        filebrowserUploadUrl : '/admin/ckeditor-image',
+    });
+    CKEDITOR.replace('desc8' , {
+        filebrowserUploadUrl : '/admin/ckeditor-image',
+    });
+    CKEDITOR.replace('desc9' , {
+        filebrowserUploadUrl : '/admin/ckeditor-image',
+    });
+    CKEDITOR.replace('desc10' , {
+        filebrowserUploadUrl : '/admin/ckeditor-image',
+    });
+    CKEDITOR.replace('desc11' , {
+        filebrowserUploadUrl : '/admin/ckeditor-image',
+    });
+    CKEDITOR.replace('desc12' , {
+        filebrowserUploadUrl : '/admin/ckeditor-image',
+    });
+</script>

@@ -1,0 +1,54 @@
+<div class="header w100 grid-x align-middle align-justify">
+    <div class="title grid-y align-top">
+        <h6>Dashboard</h6>
+        <div class="sub-title grid-x align-middle">
+            <a>Dashboard</a>
+            <i class="fas fa-chevron-right"></i>
+            <span>Pages</span>
+            <i class="fas fa-chevron-right"></i>
+            <a href="/admin/pages/skills">Skills</a>
+            <i class="fas fa-chevron-right"></i>
+            <span class="active"><%= skill.skillEN %></span>
+        </div>
+    </div>
+</div>
+<div class="body w100 grid-y">
+    <div class="grid-x form-box w100">
+
+        <form class="EditSkill w100">
+            <div class="form-head">
+                <h6><%= skill.skillEN %> Skill</h6>
+            </div>
+            <div class="error-box"></div>
+            <div class="lastupdate grid-x-no align-middle">
+                <h6>Last Update : </h6>
+                <span><%= skill.updatedBy.name %></span>
+                <span><%= date(skill.updatedAt).format('YYYY MMM D') %></span>
+            </div>    
+            <div class="form-group grid-x align-justify">
+                <div class="group">
+                    <label for="skillEN">English Skill</label>
+                    <input type="text" name="skillEN" placeholder="Enter Skill Name" value="<%= skill.skillEN %>">
+                </div>
+                <div class="group">
+                    <label for="skillCN">China Skill</label>
+                    <input type="text" name="skillCN" placeholder="输入技能名称" value="<%= skill.skillCN %>">
+                </div>
+            </div>
+            <div class="form-group grid-x align-justify">
+                <div class="group">
+                    <label for="skillFA">Persian Skill</label>
+                    <input class="input-fa" type="text" name="skillFA" placeholder="نام مهارت را وارد کنید" value="<%= skill.skillFA %>">
+                </div>
+                <div class="group">
+                    <label for="skillPercent">Skill percentage</label>
+                    <input type="number" name="skillPercent" placeholder="" value="<%= skill.skillPercent %>">
+                </div>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-primary">Update</button>
+                <input class="hidden" type="hidden" name="skillId" value="<%= skill._id %>">
+            </div>
+        </form>
+    </div>
+</div>

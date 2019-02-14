@@ -1,0 +1,24 @@
+{
+    "lang" : "cn",
+    "home" : {
+        "contact" : {
+            "button"  : "发送",
+            "name"    : "你的名字",
+            "email"   : "你的邮件",
+            "message" : "写下你的信息..."
+        },
+        "navbar" : {
+            "home"        : "家",
+            "aboutMe"     : "关于我",
+            "experiences" : "经验",
+            "testimonial" : "告别赛",
+            "contact"     : "联系"
+        }
+    },
+    "skill" : {
+        "header" : "我的技能"
+    },
+    "panel" : {
+
+    }
+}

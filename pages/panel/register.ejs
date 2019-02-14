@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/dist/<%= manifest.admin[0] %>" as="style">
+</head>
+<body>
+    <div class="login-admin grid align-center-middle">
+        <div class="login-wrap form-box">
+            <form class="w100 Register">
+                <a href="/" class="logo grid align-center-middle mb-1">
+                    <img src="/panel/images/logo/mario-rover-brand-compressor.png" alt="Mario Rover"/>
+                </a>
+                <div class="form-group">
+                    <div class="grid-y input-group w100">
+                        <label for="email">Email</label>
+                        <input class="EN input-en" name="email" type="text" value="" >
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="grid-y input-group w100">
+                        <label for="phone">Phone Number</label>
+                        <input class="EN input-en" name="phone" type="text" value="" placeholder="+989">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="grid-y input-group w100">
+                        <label for="name">Full Name</label>
+                        <input class="EN input-en" name="name" type="text" value="">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="grid-y input-group w100">  
+                        <label for="password">Password</label>
+                        <input class="EN input-en" name="password" type="password" value="">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="grid-y input-group w100">  
+                        <label for="CPassword">Confirm Password</label>
+                        <input class="EN input-en" name="CPassword" type="password" value="">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-primary grid align-center-middle w100" type="submit">
+                        <span>Sign in</span>
+                        <input type="hidden" name="recaptcha" value="">
+                    </button>
+                </div>
+                <div class="form-group mb-1">
+                    <a class="reset" href="/admin/login">Do You Have Account ? Sign In Now</a>
+                </div>
+                <div class="error-box"></div>
+            </form>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js?render=<%= sitekey %>"></script>
+    <script>
+        grecaptcha.ready(function() {
+            grecaptcha.execute('<%= sitekey %>', {action: 'login'})
+                .then(function(token) {
+                    $('.Register input[name = "recaptcha"]').val(token);
+                });
+        });
+    </script>
+    <script src="/dist/<%= manifest.admin[1] %>"></script>  
+</body>
+</html>
+

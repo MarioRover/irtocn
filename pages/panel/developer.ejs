@@ -1,0 +1,46 @@
+<div class="header w100 grid-x align-middle align-justify">
+    <div class="title grid-y align-top">
+        <h6>Dashboard</h6>
+        <div class="sub-title grid-x align-middle">
+            <span>Dashboard</span>
+            <i class="fas fa-chevron-right"></i>
+            <span>Developer Tools</span>
+        </div>
+    </div>
+</div>
+<div class="body w100 grid-y">
+    <div class="grid-x form-box w100">
+        <form class="Developer w100">
+            <div class="form-head">
+                <h6>Developer Options</h6>
+            </div>
+            <div class="error-box"></div>
+            <div class="form-group grid align-justify">
+                <div class="form-group">
+                    <div class="grid-y">
+                        <div class="checkbox mb-1">
+                            <span>Active Debug System</span>
+                            <input type="checkbox" name="debug" class="hidden" value="">
+                            <div class="tick grid align-center-middle <% if(dev.debug) { %> ticked <% } %>">
+                            <i class="fas fa-check"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid-y">
+                        <div class="checkbox mb-1">
+                            <span>Active Repair System</span>
+                            <input type="checkbox" name="repair" class="hidden" value="">
+                            <div class="tick grid align-center-middle <% if(dev.repair) { %> ticked <% } %>">
+                            <i class="fas fa-check"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+            <div class="form-group">
+                <button class="btn btn-primary">Update</button>
+            </div>
+        </form>
+    </div>
+</div>

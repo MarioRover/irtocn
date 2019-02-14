@@ -1,0 +1,24 @@
+{
+    "lang" : "fa",
+    "home" : {
+        "contact" : {
+            "button" : "ارسال",
+            "name"    : "نام شما",
+            "email"   : "ایمیل",
+            "message" : "پیام خود را بنویسید ..."
+        },
+        "navbar" : {
+            "home"        : "خانه",
+            "aboutMe"     : "درباره من",
+            "experiences" : "تجربیات",
+            "testimonial" : "گواهی نامه",
+            "contact"     : "تماس با من"
+        }
+    },
+    "skill" : {
+        "header" : "مهارت های من"
+    },
+    "panel" : {
+        
+    }
+}

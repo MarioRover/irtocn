@@ -1,0 +1,49 @@
+<div class="header w100 grid-x align-middle align-justify">
+    <div class="title grid-y align-top">
+        <h6>Dashboard</h6>
+        <div class="sub-title grid-x align-middle">
+            <a>Dashboard</a>
+            <i class="fas fa-chevron-right"></i>
+            <span class="active">Messages</span>
+        </div>
+    </div>
+</div>
+<div class="body w100 grid-y">
+    <table class="table w100">
+        <thead>
+            <tr>
+            <th>#</th>
+            <th>Full Name</th>
+            <th>Email</th>
+            <th>Date</th>
+            <th>Option</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% if(messages.docs.length > 0) {
+                let i = 0;
+                messages.docs.forEach(message => { i+=1 %>
+                    <tr class="<%= message.seen ? 'seen' : '' %>">
+                        <th class="row"><%= i %></th>
+                        <td><%= message.fullname %></td>
+                        <td><%= message.email %></td>
+                        <td><%= date(message.createdAt).format('YYYY MMM D') %></td>
+                        <td>
+                            <div class="grid-x align-left">
+                                <a href="/admin/messages/<%= message._id %>" class="button" title="View"><i class="far fa-eye"></i></i></a>
+                                <button title="Delete" class="deleteMessage" value="<%= message._id %>"><i class="far fa-trash-alt"></i></button>
+                            </div>
+                        </td>
+                    </tr>
+                <% }) 
+            } %>
+        </tbody>
+    </table>
+    <%- include(viewPath('panel/layout/pagination') , { pagination : messages }) -%>
+</div>
+<script>
+    const rowDelete = (objId) => {
+        let row = $(`tr td button[value=${objId}]`).parents('tr');
+        $(row).remove();
+    }
+</script>

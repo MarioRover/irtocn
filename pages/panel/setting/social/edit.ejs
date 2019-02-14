@@ -1,0 +1,54 @@
+<div class="header w100 grid-x align-middle align-justify">
+    <div class="title grid-y align-top">
+        <h6>Dashboard</h6>
+        <div class="sub-title grid-x align-middle">
+            <a>Dashboard</a>
+            <i class="fas fa-chevron-right"></i>
+            <span>Setting Website</span>
+            <i class="fas fa-chevron-right"></i>
+            <a href="/admin/setting/social">Social Networking</a>
+            <i class="fas fa-chevron-right"></i>
+            <span class="active"><%= social.name %></span>
+        </div>
+    </div>
+</div>
+<div class="body w100 grid-y">
+    <div class="grid-x form-box w100">
+
+        <form class="EditSocial w100">
+            <div class="form-head">
+                <h6><%= social.name %></h6>
+            </div>
+            <div class="error-box"></div>
+            <div class="lastupdate grid-x-no align-middle">
+                <h6>Last Update : </h6>
+                <span><%= social.updatedBy.name %></span>
+                <span><%= date(social.updatedAt).format('YYYY MMM D') %></span>
+            </div>    
+            <div class="form-group grid-x align-justify">
+                <div class="group">
+                    <label for="name">Name of Social Networking</label>
+                    <input type="text" name="name" placeholder="Enter Social Name" value="<%= social.name %>">
+                </div>
+                <div class="group">
+                    <label for="icon">Icon of Social Networking</label>
+                    <input type="text" name="icon" placeholder="Please Enter < i > Tag" value="<%= social.icon %>">
+                    <span class="form-text">
+                        Choice Icon Tags &lt; i &gt; From <a href="https://fontawesome.com/" target="_blank">fontawesome.com</a>
+                    </span>
+                </div>
+            </div>
+            <div class="form-group grid-x align-justify">
+                <label for="link">Link of Social Networking</label>
+                <input type="text" name="link" placeholder="Enter Social Link" value="<%= social.link %>">
+                <span class="form-text">
+                    For insert link , Better go to <a href="https://goo.gl/" target="_blank">goo.gl</a> , Create a google link , Then inset here.
+                </span>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-primary">Update</button>
+                <input class="hidden" type="hidden" name="socialId" value="<%= social._id %>">
+            </div>
+        </form>
+    </div>
+</div>

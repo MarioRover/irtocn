@@ -1,0 +1,49 @@
+<div class="profile grid align-center-middle">
+    <% if(isEmpty(req.user.profileImage)) { %>
+        <img src="/panel/images/user/unknown-employee.jpg" alt="<%= req.user.name %>">
+        <% } else { %>
+        <img src="<%= req.user.profileImage.destination %>" alt="<%= req.user.name %>">
+    <% } %>
+    <div class="dropdown-menu dropdown-menu-anim">
+        <div class="user-card w100 grid-x-no mb-2">
+        <div class="user-profile">
+            <% if(isEmpty(req.user.profileImage)) { %>
+                <img src="/panel/images/user/unknown-employee.jpg" alt="<%= req.user.name %>">
+                <% } else { %>
+                <img src="<%= req.user.profileImage.destination %>" alt="<%= req.user.name %>">
+            <% } %>    
+        </div>
+        <div class="user-info">
+            <span><%= req.user.name %></span>
+        </div>
+        </div>
+        
+        <div class="menu w100 mb-1">
+        <a href="/admin/user/profile" class="link grid-x-no align-middle">
+            <i class="fas fa-briefcase"></i>
+            <span>My Profile</span>
+        </a>
+        <div class="link grid-x-no align-middle">
+            <i class="fas fa-envelope-open"></i>
+            <a href="/admin/user/message">Message</a>
+        </div>
+        </div>
+        <div class="w100 grid align-left">
+        <a href="/admin/logout" class="btn ml-1 btn-primary grid align-center-middle">
+            <span>Sing Out</span>
+        </a>
+        </div>
+    </div>
+</div>
+<div class="lang grid align-center-middle">
+    <img src="/panel/images/flag/usa-flag-compressor.png" alt="English">
+</div>
+<div class="item grid align-center-middle">
+    <i class="fas fa-cog"></i>
+</div>
+<div class="item grid align-center-middle">
+    <i class="fas fa-bell"></i>
+</div>
+<div class="item grid align-center-middle">
+    <i class="fas fa-search"></i>
+</div>

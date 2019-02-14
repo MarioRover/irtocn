@@ -1,0 +1,24 @@
+{
+    "lang" : "en",
+    "home" : {
+        "contact" : {
+            "button" : "send",
+            "name"    : "Your Name",
+            "email"   : "Your Email",
+            "message" : "Write Your Message..."
+        },
+        "navbar" : {
+            "home"        : "Home",
+            "aboutMe"     : "About Me",
+            "experiences" : "Experiences",
+            "testimonial" : "Testimonial",
+            "contact"     : "Contact"
+        }
+    },
+    "skill" : {
+        "header" : "My Skills"
+    },
+    "panel" : {
+
+    }
+}

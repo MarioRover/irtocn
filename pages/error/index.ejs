@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/panel/styles/setting.css">
+    <link rel="stylesheet" href="/panel/styles/fonts.css">
+    <link rel="stylesheet" href="/plugin/higllight/darcula.css">
+</head>
+<body>
+    <section class="error-stack grid align-center-middle">
+        <div class="container grid-y">
+            <div class="row grid-x-no align-middle"> 
+                <h6>Error Message</h6>
+                <p class="message"> : <%= message %></p>
+            </div>
+            <div class="row grid-x-no align-middle">
+                <h6>Status Code : </h6>
+                <p class="statusCode"> <%= statusCode %></p>
+            </div>
+            <pre>
+                <code class="html stack"><%= stack %></code>
+            </pre>
+        </div>
+    </section>
+    <script src="/plugin/higllight/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>

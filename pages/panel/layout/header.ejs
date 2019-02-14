@@ -1,0 +1,31 @@
+<header class="grid align-center">
+    <div class="w100 grid align-middle">
+
+        <div class="header-brand grid align-middle">
+            <div class="w100 grid-x align-middle align-justify">
+            <div class="brand grid-x-no align-middle">
+                <img src="/panel/images/logo/mario-rover-brand-compressor.png" alt="MarioRover">
+                <h4>Mario Rover</h4>
+                <span>Version 1.02</span>
+            </div>
+            <div class="topbar grid-x-no-re align-middle">
+                <%- include(viewPath('panel/layout/topbar')) %>
+            </div>
+            <div class="mobile-nav-icon grid-x-no align-middle">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-ellipsis-h"></i>
+            </div>
+            <div class="content mobile-nav">
+                <%- include(viewPath('panel/layout/mobile-navbar')) %>
+            </div>
+            <div class="topbar topbar-mobile grid-y">
+                <div class="close-nav grid align-center-middle">
+                    <i class="fas fa-times"></i>
+                </div>
+                <%- include(viewPath('panel/layout/topbar')) %>
+            </div>
+            </div>
+        </div>
+    
+    </div>
+</header>

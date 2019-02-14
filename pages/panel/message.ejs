@@ -1,0 +1,33 @@
+<div class="header w100 grid-x align-middle align-justify">
+    <div class="title grid-y align-top">
+        <h6>Dashboard</h6>
+        <div class="sub-title grid-x align-middle">
+            <a>Dashboard</a>
+            <i class="fas fa-chevron-right"></i>
+            <a href="/admin/messages">Messages</a>
+            <i class="fas fa-chevron-right"></i>
+            <span class="active"><%= message.email %></span>
+        </div>
+    </div>
+</div>
+<div class="body w100 grid-y">
+    <div class="message-box grid-y">
+        <div class="grid-x align-middle">
+            <h4>Email : </h4>
+            <p><%= message.email %></p>
+        </div>
+        <div class="grid-x align-middle">
+            <h4>Name : </h4>
+            <p><%= message.fullname %></p>
+        </div>
+        <div class="grid-x align-middle">
+            <h4>Date : </h4>
+            <p><%= date(message.createdAt).format('YYYY MMM D') %></p>
+            <p><%= date(message.createdAt).format(' HH:mm:ss') %></p>
+        </div>
+        <div class="grid-x align-middle">
+            <h4>Text : </h4>
+            <p><%= message.message %></p>
+        </div>
+    </div>
+</div>

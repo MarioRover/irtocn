@@ -1,0 +1,214 @@
+<div class="header w100 grid-x align-middle align-justify">
+    <div class="title grid-y align-top">
+        <h6>Dashboard</h6>
+        <div class="sub-title grid-x align-middle">
+            <a>Dashboard</a>
+            <i class="fas fa-chevron-right"></i>
+            <span>Pages</span>
+            <i class="fas fa-chevron-right"></i>
+            <span class="active">Services</span>
+        </div>
+    </div>
+</div>
+<div class="body w100 grid-y">
+    <div class="grid-x form-box w100">
+        <form class="Service w100">
+            <div class="form-head">
+                <h6>Services</h6>
+            </div>
+            <div class="error-box"></div>
+            <% if(service !== 'undefined') { %>
+            <div class="lastupdate grid-x-no align-middle">
+                <h6>Last Update : </h6>
+                <span><%= service.updatedBy.name %></span>
+                <span><%= date(service.updatedAt).format('YYYY MMM D') %></span>
+            </div>    
+            <% } %>
+            <div class="form-head">
+                <h6>First Services</h6>
+            </div>
+            <!-- English -->
+            <div class="form-group grid-x align-justify">
+                <div class="group">
+                    <label for="serviceHeader1EN">Header of English Service</label>
+                    <input type="text" name="serviceHeader1EN" placeholder="Enter Header Text" value="<%= service.serviceHeader1EN %>">
+                </div>
+                <div class="group">
+                    <label for="desc1EN">Description of English Service</label>
+                    <input type="text" name="desc1EN" placeholder="Enter Description Text" value="<%= service.desc1EN %>">
+                </div>
+            </div>
+            <!-- China -->
+            <div class="form-group grid-x align-justify">
+                <div class="group">
+                    <label for="serviceHeader1CN">Header of China Service</label>
+                    <input type="text" name="serviceHeader1CN" placeholder="Enter Header Text" value="<%= service.serviceHeader1CN %>">
+                </div>
+                <div class="group">
+                    <label for="desc1CN">Description of China Service</label>
+                    <input type="text" name="desc1CN" placeholder="Enter Description Text" value="<%= service.desc1CN %>">
+                </div>
+            </div>
+            <!-- Persian -->
+            <div class="form-group grid-x align-justify">
+                <div class="group">
+                    <label for="serviceHeader1FA">Header of Persian Service</label>
+                    <input class="input-fa" type="text" name="serviceHeader1FA" placeholder="متن سربرگ را وارد کنید" value="<%= service.serviceHeader1FA %>">
+                </div>
+                <div class="group">
+                    <label for="desc1FA">Description of Persian Service</label>
+                    <input class="input-fa" type="text" name="desc1FA" placeholder="متن توصیف را وارد کنید" value="<%= service.desc1FA %>">
+                </div>
+            </div>
+            <div class="form-group grid align-left">
+                <div class="group">
+                    <label for="icon1">Icon of Service</label>
+                    <input type="text" name="icon1" placeholder="Please Enter < i > Tag" value="<%= service.icon1 %>">
+                    <span class="form-text">
+                        Choice Icon Tags &lt; i &gt; From <a href="https://fontawesome.com/" target="_blank">fontawesome.com</a>
+                    </span>
+                </div>    
+            </div>
+            <div class="form-head">
+                <h6>Second Services</h6>
+            </div>
+            <!-- English -->
+            <div class="form-group grid-x align-justify">
+                <div class="group">
+                    <label for="serviceHeader2EN">Header of English Service</label>
+                    <input type="text" name="serviceHeader2EN" placeholder="Enter Header Text" value="<%= service.serviceHeader2EN %>">
+                </div>
+                <div class="group">
+                    <label for="desc2EN">Description of English Service</label>
+                    <input type="text" name="desc2EN" placeholder="Enter Description Text" value="<%= service.desc2EN %>">
+                </div>
+            </div>
+            <!-- China -->
+            <div class="form-group grid-x align-justify">
+                <div class="group">
+                    <label for="serviceHeader2CN">Header of China Service</label>
+                    <input type="text" name="serviceHeader2CN" placeholder="Enter Header Text" value="<%= service.serviceHeader2CN %>">
+                </div>
+                <div class="group">
+                    <label for="desc2CN">Description of China Service</label>
+                    <input type="text" name="desc2CN" placeholder="Enter Description Text" value="<%= service.desc2CN %>">
+                </div>
+            </div>
+            <!-- Persian -->
+            <div class="form-group grid-x align-justify">
+                <div class="group">
+                    <label for="serviceHeader2FA">Header of Persian Service</label>
+                    <input class="input-fa" type="text" name="serviceHeader2FA" placeholder="متن سربرگ را وارد کنید" value="<%= service.serviceHeader2FA %>">
+                </div>
+                <div class="group">
+                    <label for="desc2FA">Description of Persian Service</label>
+                    <input class="input-fa" type="text" name="desc2FA" placeholder="متن توصیف را وارد کنید" value="<%= service.desc2FA %>">
+                </div>
+            </div>
+            <div class="form-group grid align-left">
+                <div class="group">
+                    <label for="icon2">Icon of Service</label>
+                    <input type="text" name="icon2" placeholder="Please Enter < i > Tag" value="<%= service.icon2 %>">
+                    <span class="form-text">
+                        Choice Icon Tags &lt; i &gt; From <a href="https://fontawesome.com/" target="_blank">fontawesome.com</a>
+                    </span>
+                </div>    
+            </div>
+            <div class="form-head">
+                <h6>Third Services</h6>
+            </div>
+            <!-- English -->
+            <div class="form-group grid-x align-justify">
+                <div class="group">
+                    <label for="serviceHeader3EN">Header of English Service</label>
+                    <input type="text" name="serviceHeader3EN" placeholder="Enter Header Text" value="<%= service.serviceHeader3EN %>">
+                </div>
+                <div class="group">
+                    <label for="desc3EN">Description of English Service</label>
+                    <input type="text" name="desc3EN" placeholder="Enter Description Text" value="<%= service.desc3EN %>">
+                </div>
+            </div>
+            <!-- China -->
+            <div class="form-group grid-x align-justify">
+                <div class="group">
+                    <label for="serviceHeader3CN">Header of China Service</label>
+                    <input type="text" name="serviceHeader3CN" placeholder="Enter Header Text" value="<%= service.serviceHeader3CN %>">
+                </div>
+                <div class="group">
+                    <label for="desc3CN">Description of China Service</label>
+                    <input type="text" name="desc3CN" placeholder="Enter Description Text" value="<%= service.desc3CN %>">
+                </div>
+            </div>
+            <!-- Persian -->
+            <div class="form-group grid-x align-justify">
+                <div class="group">
+                    <label for="serviceHeader3FA">Header of Persian Service</label>
+                    <input class="input-fa" type="text" name="serviceHeader3FA" placeholder="متن سربرگ را وارد کنید" value="<%= service.serviceHeader3FA %>">
+                </div>
+                <div class="group">
+                    <label for="desc3FA">Description of Persian Service</label>
+                    <input class="input-fa" type="text" name="desc3FA" placeholder="متن توصیف را وارد کنید" value="<%= service.desc3FA %>">
+                </div>
+            </div>
+            <div class="form-group grid align-left">
+                <div class="group">
+                    <label for="icon3">Icon of Service</label>
+                    <input type="text" name="icon3" placeholder="Please Enter < i > Tag" value="<%= service.icon3 %>">
+                    <span class="form-text">
+                        Choice Icon Tags &lt; i &gt; From <a href="https://fontawesome.com/" target="_blank">fontawesome.com</a>
+                    </span>
+                </div>    
+            </div>
+            <div class="form-head">
+                <h6>Fourth Services</h6>
+            </div>
+            <!-- English -->
+            <div class="form-group grid-x align-justify">
+                <div class="group">
+                    <label for="serviceHeader4EN">Header of English Service</label>
+                    <input type="text" name="serviceHeader4EN" placeholder="Enter Header Text" value="<%= service.serviceHeader4EN %>">
+                </div>
+                <div class="group">
+                    <label for="desc4EN">Description of English Service</label>
+                    <input type="text" name="desc4EN" placeholder="Enter Description Text" value="<%= service.desc4EN %>">
+                </div>
+            </div>
+            <!-- China -->
+            <div class="form-group grid-x align-justify">
+                <div class="group">
+                    <label for="serviceHeader4CN">Header of China Service</label>
+                    <input type="text" name="serviceHeader4CN" placeholder="Enter Header Text" value="<%= service.serviceHeader4CN %>">
+                </div>
+                <div class="group">
+                    <label for="desc4CN">Description of China Service</label>
+                    <input type="text" name="desc4CN" placeholder="Enter Description Text" value="<%= service.desc4CN %>">
+                </div>
+            </div>
+            <!-- Persian -->
+            <div class="form-group grid-x align-justify">
+                <div class="group">
+                    <label for="serviceHeader4FA">Header of Persian Service</label>
+                    <input class="input-fa" type="text" name="serviceHeader4FA" placeholder="متن سربرگ را وارد کنید" value="<%= service.serviceHeader4FA %>">
+                </div>
+                <div class="group">
+                    <label for="desc4FA">Description of Persian Service</label>
+                    <input class="input-fa" type="text" name="desc4FA" placeholder="متن توصیف را وارد کنید" value="<%= service.desc4FA %>">
+                </div>
+            </div>
+            <div class="form-group grid align-left">
+                <div class="group">
+                    <label for="icon4">Icon of Service</label>
+                    <input type="text" name="icon4" placeholder="Please Enter < i > Tag" value="<%= service.icon4 %>">
+                    <span class="form-text">
+                        Choice Icon Tags &lt; i &gt; From <a href="https://fontawesome.com/" target="_blank">fontawesome.com</a>
+                    </span>
+                </div>    
+            </div>
+
+             
+            <div class="form-group">
+                <button class="btn btn-primary">Save</button>
+            </div>
+        </form>
+    </div>
+</div>

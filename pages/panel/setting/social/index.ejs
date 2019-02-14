@@ -1,0 +1,83 @@
+<div class="header w100 grid-x align-middle align-justify">
+    <div class="title grid-y align-top">
+        <h6>Dashboard</h6>
+        <div class="sub-title grid-x align-middle">
+            <a>Dashboard</a>
+            <i class="fas fa-chevron-right"></i>
+            <span>Setting Website</span>
+            <i class="fas fa-chevron-right"></i>
+            <span class="active">Social Networking</span>
+        </div>
+    </div>
+</div>
+<div class="body w100 grid-y">
+    <div class="grid-x form-box w100">
+        <table class="table w100">
+            <thead>
+                <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Link</th>
+                <th>Date</th>
+                <th>Option</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% if(!isEmpty(socials)) {
+                    let i = 0;
+                    socials.forEach(social => { i+=1 %>
+                        <tr>
+                            <th class="row"><%= i %></th>
+                            <td><%= social.name %></td>
+                            <td><%= social.link %></td>
+                            <td><%= date(social.createdAt).format('YYYY MMM D') %></td>
+                            <td>
+                                <div class="grid-x align-left">
+                                    <a href="/admin/setting/social/<%= social._id %>" class="button" title="Edit"><i class="fas fa-pencil-alt"></i></a>
+                                    <button title="Delete" class="deleteSocial" value="<%= social._id %>"><i class="far fa-trash-alt"></i></button>
+                                </div>
+                            </td>
+                        </tr>
+                    <% }) 
+                } %>
+            </tbody>
+        </table>
+
+
+        <form class="AddSocial w100">
+            <div class="form-head">
+                <h6>Add Social</h6>
+            </div>
+            <div class="error-box"></div>
+            <div class="form-group grid-x align-justify">
+                <div class="group">
+                    <label for="name">Name of Social Networking</label>
+                    <input type="text" name="name" placeholder="Enter Social Name" value="">
+                </div>
+                <div class="group">
+                    <label for="icon">Icon of Social Networking</label>
+                    <input type="text" name="icon" placeholder="Please Enter < i > Tag" value="">
+                    <span class="form-text">
+                        Choice Icon Tags &lt; i &gt; From <a href="https://fontawesome.com/" target="_blank">fontawesome.com</a>
+                    </span>
+                </div>
+            </div>
+            <div class="form-group grid-x align-justify">
+                <label for="link">Link of Social Networking</label>
+                <input type="text" name="link" placeholder="Enter Social Link" value="">
+                <span class="form-text">
+                    For insert link , Better go to <a href="https://goo.gl/" target="_blank">goo.gl</a> , Create a google link , Then inset here.
+                </span>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-primary">Add</button>
+            </div>
+        </form>
+    </div>
+</div>
+<script>
+    const rowDelete = (objId) => {
+        let row = $(`tr td button[value=${objId}]`).parents('tr');
+        $(row).remove();
+    }
+</script>

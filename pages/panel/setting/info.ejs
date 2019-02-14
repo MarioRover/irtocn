@@ -1,0 +1,43 @@
+<div class="header w100 grid-x align-middle align-justify">
+    <div class="title grid-y align-top">
+        <h6>Dashboard</h6>
+        <div class="sub-title grid-x align-middle">
+            <a>Dashboard</a>
+            <i class="fas fa-chevron-right"></i>
+            <span>Setting Website</span>
+            <i class="fas fa-chevron-right"></i>
+            <span class="active">Information</span>
+        </div>
+    </div>
+</div>
+<div class="body w100 grid-y">
+    <div class="grid-x form-box w100">
+
+        <form class="Information w100">
+            <div class="form-head">
+                <h6>Information of WebSite</h6>
+            </div>
+            <div class="error-box"></div>
+            <% if(info !== 'undefined') { %>
+                <div class="lastupdate grid-x-no align-middle">
+                    <h6>Last Update : </h6>
+                    <span><%= info.updatedBy.name %></span>
+                    <span><%= date(info.updatedAt).format('YYYY MMM D') %></span>
+                </div>    
+            <% } %>   
+            <div class="form-group grid-x align-justify">
+                <div class="group">
+                    <label for="title">Title of Webiste</label>
+                    <input type="text" name="title" placeholder="Enter title text" value="<%= info.title %>">
+                </div>
+                <div class="group">
+                    <label for="siteName">Name of Website</label>
+                    <input type="text" name="siteName" placeholder="Enter name text" value="<%= info.siteName %>">
+                </div>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-primary">Update</button>
+            </div>
+        </form>
+    </div>
+</div>

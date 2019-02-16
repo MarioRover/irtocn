@@ -12,6 +12,7 @@ const Social = require('app/http/controllers/Admin/Setting/Social');
 const SEO = require('app/http/controllers/Admin/Setting/SEO');
 const Info = require('app/http/controllers/Admin/Setting/Info');
 const Developer = require('app/http/controllers/Admin/Developer');
+const GoogleAnalytics = require('app/http/controllers/Admin/GoogleAnalytics');
 
 const Home = require('app/http/controllers/Admin/Pages/Home');
 const About = require('app/http/controllers/Admin/Pages/About');
@@ -175,5 +176,8 @@ router.get('/dev' , RedirectIfAuth.ReTo404 , Developer.index);
 router.post('/dev' , RedirectIfAuth.ReTo404 , Developer.set);
 ///////////////////About Panel/////////////////////////
 router.get('/about' , Dashboard.about);
+//////////////Google Analytics//////////////////////
+router.get('/oauth' , RedirectIfAuth.ReTo404 , GoogleAnalytics.oauth);
+router.get('/analytics' , RedirectIfAuth.ReTo404 , GoogleAnalytics.analytics);
 
 module.exports = router;

@@ -9,3 +9,9 @@ then for start project , run command below in terminal :
 ```
 npm start
 ``` 
+open browser and go to `localhost:3000` to see website !
+> Attentions
+project default start on 3000 port , if you want change that , create `.env` file and insert into file :
+```
+PORT= {YOUR_PORT}
+```

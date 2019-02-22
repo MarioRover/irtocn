@@ -4,7 +4,7 @@ const session = require('./session');
 const service = require('./service');
 
 module.exports = {
-    port : process.env.PORT,
+    port : process.env.PORT || 3000,
     database,
     layout,
     session,
